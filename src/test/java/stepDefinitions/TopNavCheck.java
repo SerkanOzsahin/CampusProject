@@ -2,18 +2,25 @@ package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.BD;
-import utilities.DialogContent;
-import utilities.TopNav;
+import pages.TopNav;
 
-import javax.swing.*;
 import java.time.Duration;
 
 public class TopNavCheck {
 
+    @Given("Attend to Campus Page")
+    public void attendToCampusPage() {
 
+        
+    }
+
+    @When("Enter username and password")
+    public void enterUsernameAndPassword() {
+
+
+    }
 
     public void waitSec() {
         try {
@@ -34,7 +41,7 @@ public class TopNavCheck {
 
 
 
-        DialogContent dc = new DialogContent();
+
         TopNav tp=new TopNav();
 
         waitSec();
@@ -53,11 +60,11 @@ public class TopNavCheck {
         action.moveToElement(tp.Courses).click().perform();
 
         waitSec();
-        dc.closeButton.click();
+        tp.closeButton.click();
         waitSec();
         tp.Messages.click();
         waitSec();
-        dc.closeButton.click();
+        tp.closeButton.click();
         waitSec();
         tp.Profile.click();
         waitSec();
@@ -67,6 +74,7 @@ public class TopNavCheck {
         BD.quitDriver();
 
     }
+
 
 
 }

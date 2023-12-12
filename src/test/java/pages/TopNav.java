@@ -1,10 +1,11 @@
-package utilities;
+package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.BD;
 
-public class TopNav extends BD{
+public class TopNav extends BD {
 
     public TopNav() {
         PageFactory.initElements(BD.getDriver(),this);
@@ -36,6 +37,18 @@ public class TopNav extends BD{
 
     @FindBy(xpath = "//*[@class='avatar-mini ng-star-inserted']")
     public WebElement Profile;
+
+    @FindBy(css="input[formcontrolname='username']")
+    public WebElement username;
+
+    @FindBy(css="input[formcontrolname='password']")
+    public WebElement password;
+
+    @FindBy(css="button[aria-label='LOGIN']")
+    public WebElement loginButton;
+
+    @FindBy(css="[aria-label='Close dialog']")
+    public WebElement closeButton;
 
 
 
