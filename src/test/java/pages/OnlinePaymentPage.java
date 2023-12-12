@@ -32,10 +32,13 @@ public class OnlinePaymentPage extends Parent {
     @FindBy(css = "ms-standard-button[icon='eye']")
     public WebElement eyeButton;
 
-    @FindBy(css = "input[value='STRIPE']")
+    @FindBy(xpath = "//*[text()='Online Payment']")
+    public WebElement onlinePaymentText;
+
+    @FindBy(css = "input[type='radio']")
     public WebElement stripeButton;
 
-    @FindBy(id = "mat-radio-22-input")
+    @FindBy(xpath = "(//input[@type='radio'])[4]")
     public WebElement payButton;
 
     @FindBy(css = "input[type='text']")
@@ -44,7 +47,7 @@ public class OnlinePaymentPage extends Parent {
     @FindBy(css = "ms-button > button")
     public WebElement payAmountButton;
 
-    @FindBy(id = "Field-numberInput")
+    @FindBy(xpath = "(//input[@dir='ltr'])[1]")
     public WebElement creditCard;
 
     @FindBy(id = "Field-expiryInput")

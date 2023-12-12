@@ -3,8 +3,8 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.OnlinePaymentPage;
 import utilities.BD;
 import utilities.ConfigReader;
@@ -12,7 +12,6 @@ import utilities.ConfigReader;
 public class OnlinePayment {
 
     OnlinePaymentPage op = new OnlinePaymentPage();
-    Actions actions = new Actions(BD.getDriver());
 
     @Given("The user opens the hamburger menu and selects Finance")
     public void theUserOpensTheHamburgerMenuAndSelectsFinance() {
@@ -21,18 +20,20 @@ public class OnlinePayment {
         op.mySendKeys(op.password, ConfigReader.getProperty("password"));
         op.myClick(op.signButton);
         op.myClick(op.hamburgerButton);
-        Action action = actions.moveToElement(op.financeButton).build();
-        action.perform();
+        new Actions(BD.getDriver()).moveToElement(op.financeButton).click().build().perform();
         op.myClick(op.myFinanceButton);
         op.myClick(op.eyeButton);
-        op.myClick(op.stripeButton);
+        op.wait.until(ExpectedConditions.visibilityOf(op.onlinePaymentText));
+        new Actions(BD.getDriver()).moveToElement(op.stripeButton).click().build().perform();
     }
 
     @When("The user enters the payment amount, selects Online Payment and clicks Make Payment")
     public void theUserEntersThePaymentAmountSelectsOnlinePaymentAndClicksMakePayment() {
-        op.myClick(op.payButton);
+        new Actions(BD.getDriver()).moveToElement(op.payButton).click().build().perform();
         op.mySendKeys(op.amountText, "2");
+        op.myClick(op.onlinePaymentText);
         op.myClick(op.payAmountButton);
+        op.wait.until(ExpectedConditions.visibilityOf(op.creditCard));
         op.mySendKeys(op.creditCard, "4242424242424242");
         op.mySendKeys(op.expiration, "825");
         op.mySendKeys(op.CVC, "421");
