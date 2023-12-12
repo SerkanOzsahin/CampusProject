@@ -2,9 +2,12 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
-public class SendMessagePage extends BD {
+public class SendMessagePage extends Parent {
+    public SendMessagePage() {PageFactory.initElements(BD.getDriver(), this);}
+
     @FindBy(css="input[formcontrolname='username']")
     public WebElement username;
 
@@ -13,6 +16,5 @@ public class SendMessagePage extends BD {
 
     @FindBy(css="button[aria-label='LOGIN']")
     public WebElement loginButton;
-
 
 }
