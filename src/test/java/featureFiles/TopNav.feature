@@ -3,6 +3,6 @@ Feature: TopNav functionality
   @SmokeTest
   Scenario: Login and check the TopNav
 
-    Given Navigate to Campus
-    When Enter username and password and click login button
+    Given Attend to Campus Page
+    When Enter username and password
     Then Check The TopNav
