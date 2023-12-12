@@ -1,4 +1,4 @@
-Feature: Hamburger Menu Message
+Feature: Hamburger Menu Messages
 
   Scenario: in the Hamburger Menu manage my messages
     Given As a student in hamburger menu I want to be able to manage my messages
