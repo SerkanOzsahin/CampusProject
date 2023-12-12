@@ -6,19 +6,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.BD;
 import utilities.DialogContent;
 
-import java.sql.Driver;
 import java.time.Duration;
 
 public class Login {
 
   DialogContent dc = new DialogContent();
 
-  @Given("Navigate to Campus")
-  public void navigate_to_campus() {
+  @Given("Attend to Campus Page")
+  public void attend_to_campus_page() {
     BD.getDriver().get("https://test.mersys.io/");
   }
-  @When("Enter username and password and click login button")
-  public void enter_username_and_password_and_click_login_button() {
+  @When("Enter username and password")
+  public void enter_username_and_password() {
 
      WebDriverWait wait =new WebDriverWait(BD.getDriver(), Duration.ofSeconds(20));
      wait.until(ExpectedConditions.visibilityOf(dc.username));
