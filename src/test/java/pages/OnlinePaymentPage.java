@@ -34,4 +34,28 @@ public class OnlinePaymentPage extends Parent {
 
     @FindBy(css = "input[value='STRIPE']")
     public WebElement stripeButton;
+
+    @FindBy(id = "mat-radio-22-input")
+    public WebElement payButton;
+
+    @FindBy(css = "input[type='text']")
+    public WebElement amountText;
+
+    @FindBy(css = "ms-button > button")
+    public WebElement payAmountButton;
+
+    @FindBy(id = "Field-numberInput")
+    public WebElement creditCard;
+
+    @FindBy(id = "Field-expiryInput")
+    public WebElement expiration;
+
+    @FindBy(id = "Field-cvcInput")
+    public WebElement CVC;
+
+    @FindBy(xpath = "(//button)[20]")
+    public WebElement stripePayButton;
+
+    @FindBy(xpath = "//*[text()='Student Payment successfully created']")
+    public WebElement paymentSuccess;
 }
