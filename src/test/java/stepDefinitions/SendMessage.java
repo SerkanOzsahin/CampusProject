@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class SendMessage {
+
     @Given("the user clicks on the New Message link, they should see the people they can send messages to.")
     public void theUserClicksOnTheNewMessageLinkTheyShouldSeeThePeopleTheyCanSendMessagesTo() {
     }
