@@ -3,6 +3,7 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.OnlinePaymentPage;
@@ -33,10 +34,13 @@ public class OnlinePayment {
         op.mySendKeys(op.amountText, "2");
         op.myClick(op.onlinePaymentText);
         op.myClick(op.payAmountButton);
-        op.wait.until(ExpectedConditions.visibilityOf(op.creditCard));
+        By frame = By.xpath("//*[@id='payment-element']/div/iframe");
+        op.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
         op.mySendKeys(op.creditCard, "4242424242424242");
         op.mySendKeys(op.expiration, "825");
         op.mySendKeys(op.CVC, "421");
+        BD.getDriver().switchTo().parentFrame();
+        op.wait.until(ExpectedConditions.elementToBeClickable(op.stripePayButton));
         op.myClick(op.stripePayButton);
     }
 

@@ -47,7 +47,7 @@ public class OnlinePaymentPage extends Parent {
     @FindBy(css = "ms-button > button")
     public WebElement payAmountButton;
 
-    @FindBy(xpath = "(//input[@dir='ltr'])[1]")
+    @FindBy(id = "Field-numberInput")
     public WebElement creditCard;
 
     @FindBy(id = "Field-expiryInput")
@@ -56,7 +56,7 @@ public class OnlinePaymentPage extends Parent {
     @FindBy(id = "Field-cvcInput")
     public WebElement CVC;
 
-    @FindBy(xpath = "(//button)[20]")
+    @FindBy(xpath = "(//span[@class='mdc-button__label'])[15]")
     public WebElement stripePayButton;
 
     @FindBy(xpath = "//*[text()='Student Payment successfully created']")
