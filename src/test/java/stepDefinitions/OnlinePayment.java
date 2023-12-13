@@ -13,6 +13,7 @@ import utilities.ConfigReader;
 public class OnlinePayment {
 
     OnlinePaymentPage op = new OnlinePaymentPage();
+    String creditCardNumber = "4242424242424242";
 
     @Given("The user opens the hamburger menu and selects Finance")
     public void theUserOpensTheHamburgerMenuAndSelectsFinance() {
@@ -36,7 +37,7 @@ public class OnlinePayment {
         op.myClick(op.payAmountButton);
         By frame = By.xpath("//*[@id='payment-element']/div/iframe");
         op.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
-        op.mySendKeys(op.creditCard, "4242424242424242");
+        op.mySendKeys(op.creditCard, creditCardNumber);
         op.mySendKeys(op.expiration, "825");
         op.mySendKeys(op.CVC, "421");
         BD.getDriver().switchTo().parentFrame();
