@@ -16,7 +16,7 @@ import javax.swing.*;
 public class _09_Hamburger_Menu_Finance {
     _09_Hamburger_Menu_FinancePO dc = new _09_Hamburger_Menu_FinancePO();
     Actions actions = new Actions(BD.getDriver());
-    @Given("Navigate to site")
+    @Given("NavigateToFinancePage")
     public void navigateToSite() {
         BD.getDriver().get("https://test.mersys.io/");
         dc.mySendKeys(dc.userName, "Student_4");
