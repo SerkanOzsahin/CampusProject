@@ -16,10 +16,14 @@ public class SendMessage {
         sp.mySendKeys(sp.username, ConfigReader.getProperty("username"));
         sp.mySendKeys(sp.password, ConfigReader.getProperty("password"));
         sp.myClick(sp.loginButton);
+        sp.myClick(sp.sendMessageButton);
+        sp.myClick(sp.senEmail);
     }
 
     @When("The user can choose the person to send the message to and write the subject of the message.")
     public void theUserCanChooseThePersonToSendTheMessageToAndWriteTheSubjectOfTheMessage() {
+        sp.myClick(sp.addReceivers);
+
     }
 
     @And("The student should receive a “Success” message when the Send message button is clicked.")
