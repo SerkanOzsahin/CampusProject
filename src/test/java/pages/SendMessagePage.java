@@ -17,4 +17,13 @@ public class SendMessagePage extends Parent {
     @FindBy(css="button[aria-label='LOGIN']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "(//span[@class='mat-mdc-button-touch-target'])[8]")
+    public WebElement sendMessageButton;
+
+    @FindBy(xpath = "(//button[@matbadgecolor='accent'])[3]")
+    public WebElement senEmail;
+
+    @FindBy(xpath = "(//span[@class='mat-mdc-button-touch-target'])[17]")
+    public WebElement addReceivers;
+
 }
