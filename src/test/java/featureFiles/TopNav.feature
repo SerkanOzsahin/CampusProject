@@ -4,6 +4,6 @@ Feature: TopNav functionality
   Scenario: Login and check the TopNav
 
     Given Attend to Campus Page
-    When Check The TopNav
 
+    When Check The TopNav
 

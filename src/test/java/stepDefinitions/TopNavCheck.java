@@ -29,6 +29,7 @@ public class TopNavCheck {
 
     }
 
+
     @When("Check The TopNav")
     public void checkTheTopNav() {
         tp.myClick(tp.Calendar); tp.waitSec();
@@ -50,7 +51,4 @@ public class TopNavCheck {
 
           BD.quitDriver();
     }
-
-
-
 }

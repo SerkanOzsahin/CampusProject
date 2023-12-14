@@ -52,6 +52,7 @@ public class TopNav extends Parent {
     @FindBy(css="[aria-label='Close dialog']")
     public WebElement closeButton;
 
+
     public void waitSec(){
         try {
             Thread.sleep(2000);
@@ -59,7 +60,5 @@ public class TopNav extends Parent {
             e.printStackTrace();
         }
     }
-
-
 
 }
