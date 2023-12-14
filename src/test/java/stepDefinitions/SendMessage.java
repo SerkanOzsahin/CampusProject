@@ -18,6 +18,7 @@ public class SendMessage {
         sp.myClick(sp.loginButton);
         sp.myClick(sp.sendMessageButton);
         sp.myClick(sp.senEmail);
+
     }
 
     @When("The user can choose the person to send the message to and write the subject of the message.")
