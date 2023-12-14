@@ -5,7 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
-public class TopNav extends BD {
+import javax.swing.text.html.CSS;
+
+public class TopNav extends Parent {
 
     public TopNav() {
         PageFactory.initElements(BD.getDriver(),this);
@@ -32,7 +34,7 @@ public class TopNav extends BD {
     @FindBy(xpath = "//*[@class='ng-fa-icon nav-link-icon'][1]")
     public WebElement Chat;
 
-    @FindBy(xpath = "//*[@class='ng-fa-icon nav-link-icon'][2]")
+    @FindBy(css= "[id='mat-badge-content-6']")
     public WebElement Messages;
 
     @FindBy(xpath = "//*[@class='avatar-mini ng-star-inserted']")
@@ -50,7 +52,13 @@ public class TopNav extends BD {
     @FindBy(css="[aria-label='Close dialog']")
     public WebElement closeButton;
 
-
+    public void waitSec(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }
