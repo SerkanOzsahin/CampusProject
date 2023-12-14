@@ -16,14 +16,9 @@ import java.time.Duration;
 
 public class TopNavCheck {
 
+    Actions actions= new Actions(BD.getDriver());
 
     WebDriverWait wait = new WebDriverWait(BD.getDriver(), Duration.ofSeconds(2));
-
-
-
-
-
-
     TopNav tp= new TopNav();
     @Given("Attend to Campus Page")
     public void attendToCampusPage() {
@@ -34,37 +29,26 @@ public class TopNavCheck {
 
     }
 
+
     @When("Check The TopNav")
     public void checkTheTopNav() {
         tp.myClick(tp.Calendar); tp.waitSec();
-        tp.myClick(tp.Assignments); tp.waitSec();
         tp.myClick(tp.Attandance); tp.waitSec();
+        tp.myClick(tp.Assignments); tp.waitSec();
         tp.myClick(tp.Grading); tp.waitSec();
 
-        new Actions(BD.getDriver()).moveToElement
-                (tp.Chat).click().build().perform(); tp.waitSec();
-       tp.myClick(tp.closeButton); tp.waitSec();
+        actions.click(tp.HamburgerMenu).perform(); tp.waitSec();
 
-       tp.myClick(tp.HamburgerMenu); tp.waitSec();
-
-        new Actions(BD.getDriver()).moveToElement
-                (tp.Profile).click().build().perform(); tp.waitSec();
-
-        tp.myClick(tp.Profile); tp.waitSec();
-
-        new Actions(BD.getDriver()).moveToElement
-                (tp.Courses).click().build().perform(); tp.waitSec();
-
-        tp.myClick(tp.Courses); tp.waitSec();
-
-        new Actions(BD.getDriver()).moveToElement
-                (tp.Messages).click().build().perform(); tp.waitSec();
-
+        actions.doubleClick(tp.Chat).perform(); tp.waitSec();
         tp.myClick(tp.closeButton); tp.waitSec();
 
+       actions.click(tp.Messages).perform(); tp.waitSec();
+        tp.myClick(tp.closeButton); tp.waitSec();
+
+        actions.click(tp.Profile).perform(); tp.waitSec();
+
+        actions.doubleClick(tp.Courses).perform();
 
           BD.quitDriver();
     }
-
-
 }
