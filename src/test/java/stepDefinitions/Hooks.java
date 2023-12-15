@@ -7,12 +7,12 @@ import utilities.BD;
 public class Hooks {
 
     @BeforeClass
-    public void before() {
+    public void beforeClass() {
         System.out.println("Scenario Started : ");
     }
 
     @AfterClass
-    public void after() {
+    public void afterClass() {
         BD.getDriver().quit();
     }
 }
