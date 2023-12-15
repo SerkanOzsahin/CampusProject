@@ -20,6 +20,9 @@ public class OnlinePaymentPage extends Parent {
     @FindBy(css = "button[aria-label='LOGIN']")
     public WebElement signButton;
 
+    @FindBy(xpath = "//span[contains(text(), 'Welcome')]")
+    public WebElement welcomeMessage;
+
     @FindBy(xpath = "(//span[@class='mdc-button__label'])[6]")
     public WebElement hamburgerButton;
 
