@@ -1,17 +1,17 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import utilities.BD;
 
 public class Hooks {
 
-    @Before
+    @BeforeClass
     public void before() {
         System.out.println("Scenario Started : ");
     }
 
-    @After
+    @AfterClass
     public void after() {
         BD.getDriver().quit();
     }
