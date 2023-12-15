@@ -11,18 +11,6 @@ public class OnlinePaymentPage extends Parent {
         PageFactory.initElements(BD.getDriver(), this);
     }
 
-    @FindBy(id = "mat-input-0")
-    public WebElement username;
-
-    @FindBy(id = "mat-input-1")
-    public WebElement password;
-
-    @FindBy(css = "button[aria-label='LOGIN']")
-    public WebElement signButton;
-
-    @FindBy(xpath = "//span[contains(text(), 'Welcome')]")
-    public WebElement welcomeMessage;
-
     @FindBy(xpath = "(//span[@class='mdc-button__label'])[6]")
     public WebElement hamburgerButton;
 

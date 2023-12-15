@@ -4,13 +4,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import pages.OnlinePaymentPage;
+import pages.LoginPage;
 import utilities.BD;
 import utilities.ConfigReader;
 
 public class Login {
 
-    OnlinePaymentPage op = new OnlinePaymentPage();
+    LoginPage lp = new LoginPage();
 
     @Given("the user navigates to campus website")
     public void theUserNavigatesToCampusWebsite() {
@@ -19,14 +19,14 @@ public class Login {
 
     @When("the user logs in with the valid username and password")
     public void theUserLogsInWithTheValidUsernameAndPassword() {
-        op.mySendKeys(op.username, ConfigReader.getProperty("username"));
-        op.mySendKeys(op.password, ConfigReader.getProperty("password"));
-        op.myClick(op.signButton);
+        lp.mySendKeys(lp.username, ConfigReader.getProperty("username"));
+        lp.mySendKeys(lp.password, ConfigReader.getProperty("password"));
+        lp.myClick(lp.signButton);
     }
 
     @Then("the user is successfully redirected to the homepage")
     public void theUserIsSuccessfullyRedirectedToTheHomepage() {
-        op.wait.until(ExpectedConditions.visibilityOf(op.welcomeMessage));
-        op.verifyContainsText(op.welcomeMessage, "Welcome");
+        lp.wait.until(ExpectedConditions.visibilityOf(lp.welcomeMessage));
+        lp.verifyContainsText(lp.welcomeMessage, "Welcome");
     }
 }
