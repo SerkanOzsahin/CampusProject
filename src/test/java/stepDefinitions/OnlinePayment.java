@@ -8,7 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.OnlinePaymentPage;
 import utilities.BD;
-import utilities.ConfigReader;
 
 public class OnlinePayment {
 
@@ -17,10 +16,6 @@ public class OnlinePayment {
 
     @Given("The user opens the hamburger menu and selects Finance")
     public void theUserOpensTheHamburgerMenuAndSelectsFinance() {
-        BD.getDriver().get("https://test.mersys.io/");
-        op.mySendKeys(op.username, ConfigReader.getProperty("username"));
-        op.mySendKeys(op.password, ConfigReader.getProperty("password"));
-        op.myClick(op.signButton);
         op.wait.until(ExpectedConditions.visibilityOf(op.hamburgerButton));
         op.myClick(op.hamburgerButton);
         new Actions(BD.getDriver()).moveToElement(op.financeButton).click().build().perform();
