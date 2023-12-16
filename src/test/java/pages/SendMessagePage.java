@@ -21,9 +21,17 @@ public class SendMessagePage extends Parent {
     public WebElement sendMessageButton;
 
     @FindBy(xpath = "(//button[@matbadgecolor='accent'])[3]")
-    public WebElement senEmail;
+    public WebElement sendEmail;
 
-    @FindBy(xpath = "(//span[@class='mat-mdc-button-touch-target'])[17]")
+    @FindBy(xpath = "//ms-button[@icon='users-medical']")
     public WebElement addReceivers;
 
+    @FindBy(xpath = "//td/mat-checkbox")
+    public WebElement checkbox;
+
+    @FindBy(xpath = "//span[text()='Add & Close']/ancestor::ms-button")
+    public WebElement addClose;
+
+    @FindBy(xpath ="//ms-dialog")
+    public WebElement dialog;
 }
