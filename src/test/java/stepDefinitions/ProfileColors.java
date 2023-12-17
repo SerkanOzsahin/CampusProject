@@ -6,6 +6,8 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.ProfileSettingPage;
 
+import java.util.Random;
+
 public class ProfileColors {
 
     ProfileSettingPage ps = new ProfileSettingPage();
@@ -21,7 +23,9 @@ public class ProfileColors {
     public void theyNavigateToTheColorCustomizationAndChooseColors() {
         ps.wait.until(ExpectedConditions.visibilityOf(ps.profileText));
         ps.myClick(ps.themeButton);
-        ps.myClick(ps.purpleTheme);
+        Random random = new Random();
+        int randomIndex = random.nextInt(ps.themeNames.size());
+        ps.themeNames.get(randomIndex).click();
         ps.myClick(ps.saveButton);
     }
 
