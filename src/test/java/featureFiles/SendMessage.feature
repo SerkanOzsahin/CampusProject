@@ -5,4 +5,3 @@ Feature:Hamburger Menu Messaging Functionality
     When The user can choose the person to send the message to and write the subject of the message.
     And  The student should receive a “Success” message when the Send message button is clicked.
     Then  User can see list of sent messages
-
