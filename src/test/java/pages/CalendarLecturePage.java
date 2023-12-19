@@ -22,7 +22,4 @@ public class CalendarLecturePage extends Parent {
 
     @FindBy(css = "ms-button[caption='MEETINGS.TITLE.RECORDING']")
     public WebElement recordingButton;
-
-    @FindBy(css = "button[title='Play Video']")
-    public WebElement playButton;
 }

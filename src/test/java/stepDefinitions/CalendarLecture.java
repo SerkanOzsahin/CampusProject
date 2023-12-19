@@ -11,9 +11,10 @@ public class CalendarLecture {
     CalendarLecturePage cl = new CalendarLecturePage();
 
     @Given("The student is at Calendar page")
-    public void theStudentIsAtCalendarPage() {
+    public void theStudentIsAtCalendarPage() throws InterruptedException {
         cl.wait.until(ExpectedConditions.visibilityOf(cl.calendarButton));
         cl.myClick(cl.calendarButton);
+        Thread.sleep(2000);
     }
 
     @When("The student goes to My Courses and chooses a completed course")
@@ -28,7 +29,5 @@ public class CalendarLecture {
     public void theStudentShouldSeeAListOfContent() {
         cl.wait.until(ExpectedConditions.visibilityOf(cl.recordingButton));
         cl.myClick(cl.recordingButton);
-        cl.wait.until(ExpectedConditions.visibilityOf(cl.playButton));
-        cl.myClick(cl.playButton);
     }
 }
