@@ -24,4 +24,14 @@ public class FinanceTrackingPage extends Parent{
 
     @FindBy(xpath = "//span[text()='My Finance']")
     public WebElement myFinanceBtn;
+
+    @FindBy(xpath = " //*[@id=\"ms-table-0\"]/div/div/div/button/span[3] ")
+    public WebElement threePoints;
+
+    @FindBy(xpath = "//span[text()=' Excel Export ']")
+    public WebElement exelExport;
+
+    @FindBy(xpath = "//span[text()=' Pdf Export ']")
+    public WebElement pdfExport;
+
 }
