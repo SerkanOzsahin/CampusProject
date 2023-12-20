@@ -15,8 +15,8 @@ import utilities.BD;
 public class _09_Hamburger_Menu_Finance {
     _09_Hamburger_Menu_FinancePO dc = new _09_Hamburger_Menu_FinancePO();
     Actions actions = new Actions(BD.getDriver());
-    @Given("NavigateToFinancePage")
-    public void navigateToSite() {
+    @Given("Navigate to finance page")
+    public void NavigateToFinancePage() {
         BD.getDriver().get("https://test.mersys.io/");
         dc.mySendKeys(dc.userName, "Student_4");
         dc.mySendKeys(dc.password, "S12345");
