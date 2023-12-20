@@ -5,12 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
-
 public class balancePage extends Parent {
     public balancePage() {
         PageFactory.initElements(BD.getDriver(), this);
     }
-
     @FindBy(css = "input[formcontrolname='username']")
     public WebElement username;
 
@@ -64,5 +62,5 @@ public class balancePage extends Parent {
 
     @FindBy(css = "div[class='mdc-tab mat-mdc-tab mat-mdc-focus-indicator ng-star-inserted']")
     public WebElement balanceDetail;
-
 }
+
