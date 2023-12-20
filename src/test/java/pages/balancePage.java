@@ -51,4 +51,5 @@ public class balancePage extends Parent{
 
     @FindBy(css = "div[class='mdc-tab mat-mdc-tab mat-mdc-focus-indicator ng-star-inserted']")
     public WebElement balanceDetail;
+
 }

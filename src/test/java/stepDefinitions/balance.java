@@ -43,5 +43,4 @@ public class balance {
         bp.myClick(bp.balanceDetail);
 
     }
-
 }
