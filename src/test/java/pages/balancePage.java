@@ -1,22 +1,11 @@
 package pages;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
-public class balancePage extends Parent {
-    public balancePage() {
-        PageFactory.initElements(BD.getDriver(), this);
-    }
-    @FindBy(css = "input[formcontrolname='username']")
-    public WebElement username;
-
-    @FindBy(css = "input[formcontrolname='password']")
-    public WebElement password;
-
-    @FindBy(css = "button[aria-label='LOGIN']")
-    public WebElement loginButton;
+public class balancePage extends Parent{
+    public balancePage() { PageFactory.initElements(BD.getDriver(), this);}
 
     @FindBy(xpath = "//*[@aria-haspopup='menu'][1]")
     public WebElement hamburgerButton;
@@ -63,4 +52,3 @@ public class balancePage extends Parent {
     @FindBy(css = "div[class='mdc-tab mat-mdc-tab mat-mdc-focus-indicator ng-star-inserted']")
     public WebElement balanceDetail;
 }
-
