@@ -18,10 +18,13 @@ public class hamburgerMenuMsg {
     }
 
     @io.cucumber.java.en.Then("Student should be able to view and click on the link new message inbox outbox trash")
-    public void studentShouldBeAbleToViewAndClickOnTheLinkNewMessageInboxOutboxTrash() {
+    public void studentShouldBeAbleToViewAndClickOnTheLinkNewMessageInboxOutboxTrash() throws InterruptedException {
         dc.wait.until(ExpectedConditions.elementToBeClickable(dc.message));
         dc.myClick(dc.message);
         dc.myClick(dc.newMessage);
+        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.newMessage));
+        Thread.sleep(2000);
+        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.anaMenu));
         dc.myClick(dc.anaMenu);
 //        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.message));
 //        dc.myClick(dc.inbox);

@@ -31,7 +31,7 @@ public class hamburgerMenuMsgPage extends Parent {
     @FindBy(xpath = "//span[text()='Trash']")
     public  WebElement trash;
 
-    @FindBy(xpath = "(//span[@class=\"mat-mdc-button-persistent-ripple mdc-icon-button__ripple\"])[3]")
+    @FindBy(xpath = "(//*[@class=\"mat-ripple mat-mdc-button-ripple\"])[6]")
     public WebElement anaMenu;
 
 
