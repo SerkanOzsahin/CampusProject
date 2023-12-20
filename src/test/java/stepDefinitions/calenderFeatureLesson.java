@@ -24,7 +24,7 @@ public class calenderFeatureLesson {
      // dc.wait.until(ExpectedConditions.elementToBeClickable(dc.weeklyPlan));
 
        dc.myClick(dc.biologyDers);
-        Assert.assertTrue(true,"Course Meeting has not been started yet");
+       // Assert.assertTrue(true,"Course Meeting has not been started yet");
 
     }
 
