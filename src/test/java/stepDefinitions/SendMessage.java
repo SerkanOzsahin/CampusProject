@@ -49,10 +49,8 @@ public class SendMessage {
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
         robot.keyPress(KeyEvent.VK_TAB);
         robot.keyRelease(KeyEvent.VK_TAB);
-        Thread.sleep(1000);
         robot.keyPress(KeyEvent.VK_TAB);
         robot.keyRelease(KeyEvent.VK_TAB);
-        Thread.sleep(1000);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
         sp.myClick(sp.buttonSend);
