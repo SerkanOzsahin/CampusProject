@@ -7,14 +7,31 @@ import utilities.BD;
 
 public class ProfileFeaturePage extends Parent{
     public ProfileFeaturePage() {PageFactory.initElements(BD.getDriver(),this);}
-    @FindBy(css="input[formcontrolname='username']")
-    public WebElement username;
 
-    @FindBy(css="input[formcontrolname='password']")
-    public WebElement password;
+    @FindBy(css = "span[class='mdc-button__label'] > div")
+    public WebElement profileBtn;
 
-    @FindBy(css="button[aria-label='LOGIN']")
-    public WebElement loginButton;
+    @FindBy(xpath = "//span[text()='Settings']")
+    public WebElement settingsBtn;
+
+    @FindBy(xpath = "(//div/div/img)[10]")
+    public WebElement uploadPicture;
+
+    @FindBy(css = "svg[data-icon='upload']")
+    public WebElement upload;
+
+    @FindBy(xpath = " //span[text()=' Upload ']")
+    public WebElement uploadButton;
+
+    @FindBy(xpath = "//ms-save-button/button")
+    public WebElement saveProfile;
+
+    @FindBy(xpath = "//*[text()='Profile successfully updated']")
+    public WebElement profileSussessfully;
+
+    @FindBy(xpath = "//span[text()=' Yes '] ")
+    public WebElement deleteYes;
+
 
 
 }

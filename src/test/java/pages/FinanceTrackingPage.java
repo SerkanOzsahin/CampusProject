@@ -7,15 +7,6 @@ import utilities.BD;
 
 public class FinanceTrackingPage extends Parent{
     public FinanceTrackingPage() {PageFactory.initElements(BD.getDriver(), this);}
-    @FindBy(css="input[formcontrolname='username']")
-    public WebElement username;
-
-    @FindBy(css="input[formcontrolname='password']")
-    public WebElement password;
-
-    @FindBy(css="button[aria-label='LOGIN']")
-    public WebElement loginButton;
-
     @FindBy(xpath = "(//span[@class='mdc-button__label'])[6]")
     public WebElement hamburgerBtn;
 
