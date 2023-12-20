@@ -41,6 +41,5 @@ public class balance {
         bp.myClick(bp.stripePayButton);
         bp.verifyContainsText(bp.paymentSuccess, "Student Payment successfully created");
         bp.myClick(bp.balanceDetail);
-
     }
 }
