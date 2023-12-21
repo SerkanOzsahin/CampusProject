@@ -30,3 +30,4 @@ public class weeklyLesson {
         lp.myClick(lp.weeklyCoursePlan);
     }
 }
+
