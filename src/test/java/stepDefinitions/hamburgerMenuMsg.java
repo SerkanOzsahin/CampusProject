@@ -31,5 +31,6 @@ public class hamburgerMenuMsg {
         dc.wait.until(ExpectedConditions.elementToBeClickable(dc.message));
         dc.myClick(dc.message);
         dc.myClick(dc.trash);
+
     }
 }
