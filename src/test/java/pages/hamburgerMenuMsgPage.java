@@ -10,29 +10,18 @@ public class hamburgerMenuMsgPage extends Parent {
         PageFactory.initElements(BD.getDriver(), this);
     }
 
-    @FindBy(id = "mat-input-0")
-    public WebElement username;
-    @FindBy(id = "mat-input-1")
-    public WebElement password;
-    @FindBy(css = "button[aria-label='LOGIN']")
-    public WebElement loginBtn;
-
     @FindBy(xpath = "(//*[@class=\"svg-inline--fa fa-bars\"])[1]")
-    public  WebElement menu;
+    public WebElement menu;
 
     @FindBy(xpath = "//span[text()='Messaging']")
-    public  WebElement message;
+    public WebElement message;
     @FindBy(xpath = "//span[text()='New Message']")
-    public  WebElement newMessage;
+    public WebElement newMessage;
     @FindBy(xpath = "//span[text()='Inbox']")
-    public  WebElement inbox;
+    public WebElement inbox;
     @FindBy(xpath = "//span[text()='Outbox']")
-    public  WebElement outbox;
+    public WebElement outbox;
     @FindBy(xpath = "//span[text()='Trash']")
-    public  WebElement trash;
-
-    @FindBy(xpath = "(//*[@class=\"mat-ripple mat-mdc-button-ripple\"])[6]")
-    public WebElement anaMenu;
-
+    public WebElement trash;
 
 }
