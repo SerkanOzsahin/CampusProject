@@ -10,13 +10,6 @@ public class hamburgerMenuMsgPage extends Parent {
         PageFactory.initElements(BD.getDriver(), this);
     }
 
-    @FindBy(id = "mat-input-0")
-    public WebElement username;
-    @FindBy(id = "mat-input-1")
-    public WebElement password;
-    @FindBy(css = "button[aria-label='LOGIN']")
-    public WebElement loginBtn;
-
     @FindBy(xpath = "(//*[@class=\"svg-inline--fa fa-bars\"])[1]")
     public  WebElement menu;
 
@@ -30,9 +23,5 @@ public class hamburgerMenuMsgPage extends Parent {
     public  WebElement outbox;
     @FindBy(xpath = "//span[text()='Trash']")
     public  WebElement trash;
-
-    @FindBy(xpath = "(//*[@class=\"mat-ripple mat-mdc-button-ripple\"])[6]")
-    public WebElement anaMenu;
-
 
 }
