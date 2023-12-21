@@ -12,10 +12,6 @@ public class weeklyLesson {
 
     @Given("The user accesses weekly lesson schedule")
     public void theUserAccessesWeeklyLessonSchedule() {
-        BD.getDriver().get("https://test.mersys.io/");
-        lp.mySendKeys(lp.username, ConfigReader.getProperty("username"));
-        lp.mySendKeys(lp.password, ConfigReader.getProperty("password"));
-        lp.myClick(lp.loginButton);
         lp.myClick(lp.calendarButton);
         lp.myClick(lp.biology);
         lp.myClick(lp.closeButton);
