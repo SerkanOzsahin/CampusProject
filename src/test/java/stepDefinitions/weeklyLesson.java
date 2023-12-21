@@ -4,12 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.weeklyLessonPage;
-import utilities.BD;
-import utilities.ConfigReader;
 
 public class weeklyLesson {
-    weeklyLessonPage lp = new weeklyLessonPage();
-
+    weeklyLessonPage lp=new weeklyLessonPage();
     @Given("The user accesses weekly lesson schedule")
     public void theUserAccessesWeeklyLessonSchedule() {
         lp.myClick(lp.calendarButton);
@@ -26,5 +23,3 @@ public class weeklyLesson {
         lp.myClick(lp.weeklyCoursePlan);
     }
 }
-
-

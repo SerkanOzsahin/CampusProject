@@ -5,11 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
-public class weeklyLessonPage extends Parent {
+public class weeklyLessonPage extends Parent{
     public weeklyLessonPage() {
-        PageFactory.initElements(BD.getDriver(), this);
+        PageFactory.initElements(BD.getDriver(),this);
     }
-
     @FindBy(xpath = "(//span[text()='Calendar'])[1]")
     public WebElement calendarButton;
 
