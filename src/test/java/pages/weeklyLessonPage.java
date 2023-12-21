@@ -30,5 +30,4 @@ public class weeklyLessonPage extends Parent {
 
     @FindBy(xpath = "(//button[@style='margin-right: 12px;'])[3]")
     public WebElement nextButton;
-
 }
