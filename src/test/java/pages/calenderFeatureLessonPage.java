@@ -9,22 +9,16 @@ public class calenderFeatureLessonPage extends Parent {
     public calenderFeatureLessonPage() {
         PageFactory.initElements(BD.getDriver(), this);
     }
-    @FindBy(id = "mat-input-0")
-    public WebElement username;
-    @FindBy(id = "mat-input-1")
-    public WebElement password;
-    @FindBy(css = "button[aria-label='LOGIN']")
-    public WebElement loginBtn;
     @FindBy(xpath = "(//span[@class=\"mat-badge mat-badge-accent mat-badge-above mat-badge-after mat-badge-small mat-badge-hidden\"])[1]")
     public WebElement calenderClick;
-//    @FindBy(xpath = "(//button[@class=\"mat-button-toggle-button mat-focus-indicator\"])[1]")
-//   public WebElement weeklyPlan;
-    @FindBy(xpath = "(//td//div//div//div//span)[1]")
-    public WebElement biologyDers;
-//   @FindBy( = "mat-expansion-panel-header-description ng-star-inserted")
-//    public WebElement messageBox;
-//    @FindBy(xpath = "(//span[text()='Calendar'])[1]")
-//    public WebElement calenderClick;
+    @FindBy(xpath = "//*[@id=\"container-3\"]/courses-calendar/div/ms-course-schedule-board/ms-browse/div/div/table/tbody/tr[1]/td[4]/div[2]/div/div/div")
+    public WebElement matDers;
+    @FindBy(xpath = "(//span[@class='mat-mdc-button-touch-target'])[23]")
+    public WebElement closeWindow;
+    @FindBy(xpath = "(//span[@class='mat-mdc-button-touch-target'])[17]")
+    public WebElement backButton;
+    @FindBy(xpath = "//*[@id=\"container-3\"]/courses-calendar/div/ms-course-schedule-board/ms-browse/div/div/table/tbody/tr[4]/td[5]/div/div/div/div")
+    public WebElement spanishButton;
 
 
 }

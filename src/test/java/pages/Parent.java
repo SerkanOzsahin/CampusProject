@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class Parent {
 
-    public WebDriverWait wait = new WebDriverWait(BD.getDriver(), Duration.ofSeconds(20));
+    public WebDriverWait wait = new WebDriverWait(BD.getDriver(), Duration.ofSeconds(200));
 
     public void myClick(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
