@@ -3,7 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.hamburgerMenuMsgPage;
-import utilities.BD;
 
 public class hamburgerMenuMsg {
     hamburgerMenuMsgPage dc = new hamburgerMenuMsgPage();
@@ -12,7 +11,6 @@ public class hamburgerMenuMsg {
     public void theUserOpensTheHamburgerMenuAndSelectsMessage() {
         dc.myClick(dc.menu);
     }
-
     @io.cucumber.java.en.Then("Student should be able to view and click on the link new message inbox outbox trash")
     public void studentShouldBeAbleToViewAndClickOnTheLinkNewMessageInboxOutboxTrash() throws InterruptedException {
         dc.wait.until(ExpectedConditions.elementToBeClickable(dc.message));
