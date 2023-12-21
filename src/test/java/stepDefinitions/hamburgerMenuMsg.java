@@ -14,6 +14,7 @@ public class hamburgerMenuMsg {
 
     @io.cucumber.java.en.Then("Student should be able to view and click on the link new message inbox outbox trash")
     public void studentShouldBeAbleToViewAndClickOnTheLinkNewMessageInboxOutboxTrash() throws InterruptedException {
+
         dc.wait.until(ExpectedConditions.elementToBeClickable(dc.message));
         dc.myClick(dc.message);
         dc.myClick(dc.newMessage);
