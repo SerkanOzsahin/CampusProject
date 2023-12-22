@@ -6,18 +6,15 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
 public class SendMessagePage extends Parent {
+    public SendMessagePage() {PageFactory.initElements(BD.getDriver(), this);}
 
-    public SendMessagePage() {
-        PageFactory.initElements(BD.getDriver(), this);
-    }
-
-    @FindBy(css = "input[formcontrolname='username']")
+    @FindBy(css="input[formcontrolname='username']")
     public WebElement username;
 
-    @FindBy(css = "input[formcontrolname='password']")
+    @FindBy(css="input[formcontrolname='password']")
     public WebElement password;
 
-    @FindBy(css = "button[aria-label='LOGIN']")
+    @FindBy(css="button[aria-label='LOGIN']")
     public WebElement loginButton;
 
     @FindBy(xpath = "(//span[@class='mat-mdc-button-touch-target'])[8]")
@@ -35,7 +32,7 @@ public class SendMessagePage extends Parent {
     @FindBy(xpath = "//span[text()='Add & Close']/ancestor::ms-button")
     public WebElement addClose;
 
-    @FindBy(xpath = "//ms-dialog")
+    @FindBy(xpath ="//ms-dialog")
     public WebElement dialog;
 
     @FindBy(xpath = "//*[text()='Users (Fullname, Username or E-mail) was successfully added']")

@@ -8,8 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.balancePage;
 import utilities.BD;
 
-public class Balance {
-
+public class balance {
     balancePage bp = new balancePage();
     String creditCardNumber = "4242424242424242";
 

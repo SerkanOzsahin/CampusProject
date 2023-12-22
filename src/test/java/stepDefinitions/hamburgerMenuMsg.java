@@ -4,8 +4,7 @@ import io.cucumber.java.en.Given;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.hamburgerMenuMsgPage;
 
-public class HamburgerMessage {
-
+public class hamburgerMenuMsg {
     hamburgerMenuMsgPage dc = new hamburgerMenuMsgPage();
 
     @Given("The user opens the hamburger menu and selects message")
@@ -33,5 +32,6 @@ public class HamburgerMessage {
         dc.wait.until(ExpectedConditions.elementToBeClickable(dc.message));
         dc.myClick(dc.message);
         dc.myClick(dc.trash);
+
     }
 }

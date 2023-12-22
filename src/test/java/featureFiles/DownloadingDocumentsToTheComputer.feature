@@ -1,9 +1,6 @@
 Feature: Downloading documents to the computer
 
   Background:
-    Given the user navigates to campus website
-    When the user logs in with the valid username and password
-    Then the user is successfully redirected to the homepage
     Given Navigate to finance page
 
   Scenario: Downloading course grade and student transcript

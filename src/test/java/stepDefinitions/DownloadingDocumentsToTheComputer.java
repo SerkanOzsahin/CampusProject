@@ -3,20 +3,26 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.DownloadingDocumentsToTheComputerPO;
 import utilities.BD;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.Iterator;
+import java.util.Set;
 
-public class DocDownload {
-
+public class DownloadingDocumentsToTheComputer {
     DownloadingDocumentsToTheComputerPO dc = new DownloadingDocumentsToTheComputerPO();
     private final Object lockObject = new Object();
     String mainPageId;
 
+
     @Given("The student should be able to click on the grading button")
     public void theStudentShouldBeAbleToClickOnTheGradingButton() {
+
         dc.myClick(dc.gradingButton);
         mainPageId = BD.getDriver().getWindowHandle();
     }

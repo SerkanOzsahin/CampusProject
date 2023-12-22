@@ -11,6 +11,7 @@ public class DownloadingDocumentsToTheComputerPO extends Parent {
         PageFactory.initElements(BD.getDriver(), this);
     }
 
+
     @FindBy(css = "[caption='NAV.GRADING.TITLE']")
     public WebElement gradingButton;
 
@@ -25,4 +26,5 @@ public class DownloadingDocumentsToTheComputerPO extends Parent {
 
     @FindBy(xpath = "(//span[@class='mat-mdc-button-touch-target'])[18]")
     public WebElement coursePrintButton;
+
 }

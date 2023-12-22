@@ -8,7 +8,7 @@ import pages.deleteMessagePage;
 import utilities.BD;
 import utilities.ConfigReader;
 
-public class DeleteMessage {
+public class deleteMessage {
 
     deleteMessagePage dp = new deleteMessagePage();
 

@@ -5,12 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
-public class FinanceTrackingPage extends Parent {
-
-    public FinanceTrackingPage() {
-        PageFactory.initElements(BD.getDriver(), this);
-    }
-
+public class FinanceTrackingPage extends Parent{
+    public FinanceTrackingPage() {PageFactory.initElements(BD.getDriver(), this);}
     @FindBy(xpath = "(//span[@class='mdc-button__label'])[6]")
     public WebElement hamburgerBtn;
 
@@ -28,4 +24,5 @@ public class FinanceTrackingPage extends Parent {
 
     @FindBy(xpath = "//span[text()=' Pdf Export ']")
     public WebElement pdfExport;
+
 }

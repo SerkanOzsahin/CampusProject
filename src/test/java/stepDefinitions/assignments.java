@@ -2,9 +2,12 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.assignmentsPage;
+import utilities.BD;
+import utilities.ConfigReader;
 
-public class Assignments {
+public class assignments {
 
     assignmentsPage sp = new assignmentsPage();
 

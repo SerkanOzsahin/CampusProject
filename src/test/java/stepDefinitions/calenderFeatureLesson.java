@@ -3,8 +3,7 @@ package stepDefinitions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.calenderFeatureLessonPage;
 
-public class CalendarLesson {
-
+public class calenderFeatureLesson {
     calenderFeatureLessonPage dc = new calenderFeatureLessonPage();
 
     @io.cucumber.java.en.Given("The student should be able to access the information of the relevant course")

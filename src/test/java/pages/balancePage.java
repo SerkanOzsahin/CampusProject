@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
 public class balancePage extends Parent {
-
     public balancePage() {
         PageFactory.initElements(BD.getDriver(), this);
     }

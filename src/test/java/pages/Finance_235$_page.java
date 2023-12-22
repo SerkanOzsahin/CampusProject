@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
-public class Finance_235$_page extends Parent {
+public class Finance_235$_page extends Parent{
 
     public Finance_235$_page() {
         PageFactory.initElements(BD.getDriver(), this);
@@ -50,14 +50,17 @@ public class Finance_235$_page extends Parent {
     @FindBy(xpath = "(//span[@class='mdc-button__label'])[15]")
     public WebElement stripePayButton;
 
+
     @FindBy(xpath = "//*[text()='Student Payment successfully created']")
     public WebElement paymentSuccess;
 
-    public void waitSec() {
+
+    public void waitSec(){
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
 }

@@ -7,11 +7,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.Finance_235$_page;
 import utilities.BD;
 
-public class FinancePay {
+public class Finance_235$ {
 
-    Finance_235$_page fp = new Finance_235$_page();
+    Finance_235$_page fp= new Finance_235$_page();
+
     String creditCardNumber = "4242424242424242";
-    Actions actions = new Actions(BD.getDriver());
+    Actions actions= new Actions(BD.getDriver());
+
 
     @Given("Go to My Finance page")
     public void go_to_my_finance_page() {
@@ -19,12 +21,9 @@ public class FinancePay {
         fp.myClick(fp.hamburgerButton);
         actions.click((fp.financeButton)).perform();
         fp.wait.until(ExpectedConditions.visibilityOf(fp.myFinanceButton));
-        fp.myClick(fp.myFinanceButton);
-        fp.waitSec();
-        fp.myClick(fp.eyeButton);
-        fp.waitSec();
-        actions.click(fp.stripeButton).perform();
-        fp.waitSec();
+        fp.myClick(fp.myFinanceButton); fp.waitSec();
+        fp.myClick(fp.eyeButton); fp.waitSec();
+        actions.click(fp.stripeButton).perform();  fp.waitSec();
     }
 
     @When("Make payment via Stripe")
@@ -46,5 +45,7 @@ public class FinancePay {
     @Then("User should see Payment accepted")
     public void userShouldSeePaymentAccepted() {
         fp.verifyContainsText(fp.paymentSuccess, "successfully");
+
+        BD.quitDriver();
     }
 }
