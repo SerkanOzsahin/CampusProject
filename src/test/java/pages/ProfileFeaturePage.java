@@ -5,8 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
-public class ProfileFeaturePage extends Parent{
-    public ProfileFeaturePage() {PageFactory.initElements(BD.getDriver(),this);}
+public class ProfileFeaturePage extends Parent {
+    public ProfileFeaturePage() {
+        PageFactory.initElements(BD.getDriver(), this);
+    }
 
     @FindBy(css = "span[class='mdc-button__label'] > div")
     public WebElement profileBtn;
@@ -31,7 +33,4 @@ public class ProfileFeaturePage extends Parent{
 
     @FindBy(xpath = "//span[text()=' Yes '] ")
     public WebElement deleteYes;
-
-
-
 }

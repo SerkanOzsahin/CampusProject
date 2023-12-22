@@ -10,11 +10,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages._09_Hamburger_Menu_FinancePO;
 import utilities.BD;
 
+public class HamburgerFinance {
 
-
-public class _09_Hamburger_Menu_Finance {
     _09_Hamburger_Menu_FinancePO dc = new _09_Hamburger_Menu_FinancePO();
     Actions actions = new Actions(BD.getDriver());
+
     @Given("Navigate to finance page")
     public void NavigateToFinancePage() {
         BD.getDriver().get("https://test.mersys.io/");
@@ -32,7 +32,6 @@ public class _09_Hamburger_Menu_Finance {
 
     @Then("The user should be able to click my finance button")
     public void theUserShouldBeAbleToClickMyFinanceButton() {
-
         dc.wait.until(ExpectedConditions.elementToBeClickable(dc.myFinance));
         dc.myClick(dc.myFinance);
         dc.myClick(dc.student);
@@ -45,7 +44,7 @@ public class _09_Hamburger_Menu_Finance {
     }
 
     @And("The user can complete the payment transaction")
-    public void theUserCanCompleteThePaymentTransaction(){
+    public void theUserCanCompleteThePaymentTransaction() {
         By frame = By.xpath("//*[@id='payment-element']/div/iframe");
         dc.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
         dc.wait.until(ExpectedConditions.visibilityOf(dc.cardNumber));
@@ -60,6 +59,5 @@ public class _09_Hamburger_Menu_Finance {
     @Then("The user can see the message that the payment transaction is completed")
     public void theUserCanSeeTheMessageThatThePaymentTransactionIsCompleted() {
         dc.verifyContainsText(dc.successMessage, "success");
-
     }
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
 public class assignmentsPage extends Parent {
+
     public assignmentsPage() {
         PageFactory.initElements(BD.getDriver(), this);
     }

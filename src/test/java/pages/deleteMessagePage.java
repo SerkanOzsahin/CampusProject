@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.BD;
 
 public class deleteMessagePage extends Parent {
+
     public deleteMessagePage() {
         PageFactory.initElements(BD.getDriver(), this);
     }
