@@ -21,4 +21,3 @@ public class assignments {
     public void theUserClicksOnTasks() {
     }
 }
-//Since the assignments are empty,only the assignments can be clicked.
